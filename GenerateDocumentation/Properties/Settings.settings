@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GenerateDocumentation.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SetSurnamePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Путь не выбран. Выберите путь</Value>
+    </Setting>
+    <Setting Name="SetParametersPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Путь не выбран. Выберите путь</Value>
+    </Setting>
+    <Setting Name="SetWordTemplatePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Путь не выбран. Выберите путь</Value>
+    </Setting>
+    <Setting Name="SetSaveToFolderPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Путь не выбран. Выберите путь</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Путь не выбран. Выберите путь</Value>
+    </Setting>
+    <Setting Name="NumberCab" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="Translater" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SetParameterName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NPP_Номер_Комплекта</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

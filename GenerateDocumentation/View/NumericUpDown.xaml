@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="GenerateDocumentation.View.NumericUpDown"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GenerateDocumentation.View"
+             xmlns:viewModel="clr-namespace:GenerateDocumentation.ViewModel"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=viewModel:NumericUpDownViewModel, IsDesignTimeCreatable=False}"
+             d:DesignHeight="30" d:DesignWidth="200">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Content="▲" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="9"
+                    Command="{Binding UpCommand}"/>
+            <Button Grid.Row="1" Content="▼" 
+                    VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="9"
+                    Command="{Binding DownCommand}"/>
+        </Grid>
+            <TextBox IsReadOnly="True" Grid.Column="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" 
+                     Text="{Binding Number, UpdateSourceTrigger=PropertyChanged}"/>
+    </Grid>
+</UserControl>

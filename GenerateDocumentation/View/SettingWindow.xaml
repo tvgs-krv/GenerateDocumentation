@@ -1,0 +1,83 @@
+﻿<Window x:Class="GenerateDocumentation.View.SettingWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GenerateDocumentation.View"
+             xmlns:viewModel="clr-namespace:GenerateDocumentation.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="380" d:DesignWidth="400"
+             Height="380" Width="380" Title="Настройки" WindowStartupLocation="CenterScreen">
+   
+    <Window.DataContext>
+        <viewModel:SettingWindowViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="30"/>
+
+            <RowDefinition />
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1"
+                 VerticalAlignment="Center" Text="Выберите файл с фамилиями:"/>
+        <Button  Grid.Column="2" Grid.Row="1" Content="Выбрать ..." Command="{Binding SelectSurnameCommand}"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"
+                 VerticalAlignment="Center" Text="{Binding SurnamePath}"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="5"
+                 VerticalAlignment="Center" Text="Выберите файл с параметрами:"/>
+        <Button Grid.Column="2" Grid.Row="5" Content="Выбрать ..." Command="{Binding SelectPathCommand}"/>
+        <TextBlock Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2"
+                 VerticalAlignment="Center" Text="{Binding ParametersPath}"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="9"
+                   VerticalAlignment="Top" Text="Выберите папку с шаблонами Word: &#10;(По умолчанию, это папка 00_Templates)"/>
+        <Button Grid.Column="2" Grid.Row="9" Content="Выбрать ..." Command="{Binding SelectTemplateCommand}"/>
+        <TextBlock Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2"
+                   VerticalAlignment="Center" Text="{Binding WordTemplatePath}"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="13"
+                   VerticalAlignment="Top" TextWrapping="Wrap" Text="Выберите папку куда необходимо сохранить результат"/>
+        <Button Grid.Column="2" Grid.Row="13" Content="Выбрать ..." Command="{Binding SelectSavePathCommand}"/>
+        <TextBlock Grid.Column="1" Grid.Row="15" Grid.ColumnSpan="2"
+                   VerticalAlignment="Center" Text="{Binding SaveToFolderPath}"/>
+
+
+        <TextBlock Grid.Column="1" Grid.Row="17"
+                   VerticalAlignment="Top" TextWrapping="Wrap" Text="Наименование параметра, для получения номера комплекта"/>
+
+        <TextBox Grid.Column="2" Grid.Row="17" 
+                 VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Text="{Binding ParameterName}"/>
+
+
+        <!--<TextBlock Grid.Column="1" Grid.Row="14" Grid.ColumnSpan="2" TextWrapping="Wrap"
+                     Text="Здесь что - то типо краткой справки наверное будет.&#10;Все замечания и предложения по работе данного плагина присылать на следующий адрес: info@poshelnaher.com"/>-->
+
+    </Grid>
+</Window>
